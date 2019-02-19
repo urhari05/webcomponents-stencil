@@ -42,9 +42,11 @@ export namespace Components {
   }
 
   interface UcSideDrawer {
+    'open': boolean;
     'title': string;
   }
   interface UcSideDrawerAttributes extends StencilHTMLAttributes {
+    'open'?: boolean;
     'title'?: string;
   }
 }

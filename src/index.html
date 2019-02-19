@@ -25,6 +25,7 @@
 		</style>
 	</head>
 	<body>
+		<button id="side-drawer-btn">Open Side Drawer</button>
 		<uc-side-drawer title="Main Menu">
 			<nav class="side-nav">
 				<ul>
@@ -38,4 +39,15 @@
 			</nav>
 		</uc-side-drawer>
 	</body>
+	<script>
+		const sideDrawerBtn = document.querySelector("#side-drawer-btn");
+		const sideDrawer = document.querySelector("uc-side-drawer");
+
+		sideDrawerBtn.addEventListener("click", () => {
+			console.log("hello", sideDrawer.open);
+			if (!sideDrawer.open) {
+				sideDrawer.open = true;
+			}
+		});
+	</script>
 </html>
