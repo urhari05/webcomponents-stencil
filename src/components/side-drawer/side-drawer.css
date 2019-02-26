@@ -8,9 +8,10 @@ aside {
 	background: rgb(220, 230, 220);
 	box-shadow: 0 2px 8px rgb(216, 209, 209);
 	transition: left 0.3s ease-out;
+	z-index: 100;
 }
 
-:host([open]) aside {
+:host([opened]) aside {
 	left: 0;
 }
 
@@ -67,4 +68,13 @@ header button:focus {
 
 #contact-info {
 	padding: 0 1rem;
+}
+
+.backdrop {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 10;
 }
